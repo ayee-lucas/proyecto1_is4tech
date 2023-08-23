@@ -1,3 +1,5 @@
+@import "../../../../../variables/scss/global";
+
 main {
   display: grid;
   min-height: 100dvh;
@@ -16,14 +18,14 @@ main a {
   position: absolute;
   bottom: 10rem;
   padding: 5px 10px;
-  border: solid 1px white;
+  border: solid 1px $secondary-color;
   border-radius: 7px;
   cursor: pointer;
 
   transition: all 0.6s;
 
   &:hover {
-    background-color: white;
-    color: black;
+    background-color: $secondary-color;
+    color: $accent-color;
   }
 }

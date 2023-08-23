@@ -10,7 +10,7 @@ import { DogResponse } from '../components/dogs/dog-response.type';
 import { environment } from 'src/environments/environment.development';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class DogService {
   constructor(private httpClient: HttpClient) {}
@@ -29,7 +29,7 @@ export class DogService {
         const data = { status: 'failure' };
 
         return of(data);
-      }),
+      })
     );
 
     return dog;

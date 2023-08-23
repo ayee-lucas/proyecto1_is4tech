@@ -16,9 +16,7 @@ describe('DogService', () => {
 
   beforeEach(() => {
     httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
-    TestBed.configureTestingModule({
-      providers: [{ provide: HttpClient, useValue: httpClientSpy }]
-    });
+    TestBed.configureTestingModule({ providers: [httpClientSpy] });
     service = TestBed.inject(DogService);
   });
 

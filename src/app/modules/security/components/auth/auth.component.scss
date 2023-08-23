@@ -1,3 +1,5 @@
+@import "../../../../../variables/scss/global";
+
 section {
   min-height: 100dvh;
   width: 100%;
@@ -7,8 +9,8 @@ section {
   div {
     width: 200px;
     height: 100px;
-    background-color: white;
-    color: black;
+    background-color: $accent-color;
+    color: $secondary-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +20,7 @@ section {
     border-radius: 5px;
 
     h1 {
-      font-family: "Montserrat";
+      font-family: "Montserrat", sans-serif;
       font-weight: 500;
     }
   }

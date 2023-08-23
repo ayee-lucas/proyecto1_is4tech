@@ -1,3 +1,5 @@
+@import "../../../../../variables/scss/global";
+
 section {
   min-height: 100dvh;
   width: 100%;
@@ -9,22 +11,23 @@ section {
     padding: 10px;
 
     h1 {
-      font-family: "Montserrat";
+      font-family: "Montserrat", sans-serif;
       font-weight: 400;
       font-size: 40px;
     }
 
     textarea {
-      background-color: black;
+      background-color: $primary-color;
       margin-top: 10rem;
-      color: white;
+      color: $accent-color;
       padding: 5px;
       resize: none;
+      border: 1px solid $secondary-color;
     }
 
     p {
-      color: white;
-      font-family: "Montserrat";
+      color: $accent-color;
+      font-family: "Montserrat", sans-serif;
       margin-top: 5rem;
     }
   }
@@ -50,15 +53,16 @@ section {
       position: absolute;
       bottom: 10rem;
       padding: 5px 10px;
-      border: solid 1px white;
+      border: solid 1px $accent-color;
       border-radius: 7px;
       cursor: pointer;
 
       transition: all 0.6s;
 
       &:hover {
-        background-color: white;
-        color: black;
+        background-color: $secondary-color;
+        color: $accent-color;
+        border: solid 1px $secondary-color;
       }
     }
   }

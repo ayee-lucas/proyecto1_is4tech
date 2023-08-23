@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "./variables/scss/global";
+
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +10,8 @@
 
 body {
   min-height: 100dvh;
-  background-color: black;
-  color: white;
+  background-color: $primary-color;
+  color: $accent-color;
 }
 
 @font-face {

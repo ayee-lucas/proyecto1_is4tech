@@ -6,10 +6,8 @@ import { NgModule } from '@angular/core';
 import {
   SocialLoginModule,
   SocialAuthServiceConfig,
-} from '@abacritt/angularx-social-login';
-import {
   GoogleLoginProvider,
-  GoogleSigninButtonModule,
+  GoogleSigninButtonModule
 } from '@abacritt/angularx-social-login';
 
 // Project
@@ -27,15 +25,15 @@ import { AuthComponent } from './components/auth/auth.component';
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(environment.googleClient),
-          },
+            provider: new GoogleLoginProvider(environment.googleClient)
+          }
         ],
         onError: (err) => {
           console.error(err);
-        },
-      } as SocialAuthServiceConfig,
-    },
+        }
+      } as SocialAuthServiceConfig
+    }
   ],
-  bootstrap: [AuthComponent],
+  bootstrap: [AuthComponent]
 })
 export class SecurityModule {}
