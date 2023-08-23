@@ -1,0 +1,25 @@
+section {
+  min-height: 100dvh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+
+  div {
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 5px;
+
+    h1 {
+      font-family: "Montserrat";
+      font-weight: 500;
+    }
+  }
+}

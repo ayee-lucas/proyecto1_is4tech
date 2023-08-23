@@ -1,0 +1,19 @@
+<section>
+  <div class="text-wrapper">
+    <h1>Here's your dog</h1>
+
+    <textarea
+      rows="4"
+      cols="1"
+      appWhiteSpace
+      [(textToParse)]="textAreaVal"
+    ></textarea>
+
+    <p>{{ textAreaVal }}</p>
+  </div>
+
+  <div class="img-wrapper">
+    <img *ngIf="status" [src]="message" alt="dog" />
+    <button type="button" (click)="getDog()">New Dog</button>
+  </div>
+</section>

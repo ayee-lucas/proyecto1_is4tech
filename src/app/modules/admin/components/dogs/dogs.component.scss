@@ -1,0 +1,65 @@
+section {
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+
+  .text-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+    h1 {
+      font-family: "Montserrat";
+      font-weight: 400;
+      font-size: 40px;
+    }
+
+    textarea {
+      background-color: black;
+      margin-top: 10rem;
+      color: white;
+      padding: 5px;
+      resize: none;
+    }
+
+    p {
+      color: white;
+      font-family: "Montserrat";
+      margin-top: 5rem;
+    }
+  }
+
+  .img-wrapper {
+    width: 100%;
+    height: 100dvh;
+    display: grid;
+    place-items: center;
+
+    img {
+      max-width: 500px;
+      max-height: 500px;
+
+      min-height: 500px;
+      min-width: 500px;
+
+      object-fit: cover;
+    }
+
+    button {
+      all: unset;
+      position: absolute;
+      bottom: 10rem;
+      padding: 5px 10px;
+      border: solid 1px white;
+      border-radius: 7px;
+      cursor: pointer;
+
+      transition: all 0.6s;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
