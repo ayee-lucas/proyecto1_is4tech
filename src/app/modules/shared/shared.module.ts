@@ -5,6 +5,6 @@ import { WhiteSpaceDirective } from './directives/white-space.directive';
 @NgModule({
   declarations: [WhiteSpaceDirective],
   imports: [CommonModule],
-  exports: [WhiteSpaceDirective],
+  exports: [WhiteSpaceDirective]
 })
 export class SharedModule {}

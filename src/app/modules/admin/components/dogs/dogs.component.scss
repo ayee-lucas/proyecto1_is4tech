@@ -1,65 +1,49 @@
-section {
-  min-height: 100dvh;
-  width: 100%;
-  display: flex;
+@import 'src/variables/scss/global';
 
-  .text-wrapper {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-
-    h1 {
-      font-family: "Montserrat";
-      font-weight: 400;
-      font-size: 40px;
-    }
-
-    textarea {
-      background-color: black;
-      margin-top: 10rem;
-      color: white;
-      padding: 5px;
-      resize: none;
-    }
-
-    p {
-      color: white;
-      font-family: "Montserrat";
-      margin-top: 5rem;
-    }
+.text-wrapper {
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: $secondary-color;
   }
 
-  .img-wrapper {
-    width: 100%;
-    height: 100dvh;
-    display: grid;
-    place-items: center;
+  textarea {
+    background-color: $accent-color;
+    color: $primary-color;
+    resize: none;
+    border: 1px solid $secondary-color;
+  }
 
-    img {
-      max-width: 500px;
-      max-height: 500px;
+  p {
+    color: $primary-color;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
 
-      min-height: 500px;
-      min-width: 500px;
+.img-wrapper {
+  display: grid;
+  place-items: center;
 
-      object-fit: cover;
-    }
+  img {
+    max-width: 500px;
+    max-height: 500px;
 
-    button {
-      all: unset;
-      position: absolute;
-      bottom: 10rem;
-      padding: 5px 10px;
-      border: solid 1px white;
-      border-radius: 7px;
-      cursor: pointer;
+    min-height: 500px;
+    min-width: 500px;
 
-      transition: all 0.6s;
+    object-fit: cover;
+  }
 
-      &:hover {
-        background-color: white;
-        color: black;
-      }
+  button {
+    bottom: 10rem;
+    border: solid 1px $secondary-color;
+    border-radius: 7px;
+    background-color: $accent-color;
+    color: $secondary-color;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: $accent-color;
+      border: solid 1px $secondary-color;
     }
   }
 }

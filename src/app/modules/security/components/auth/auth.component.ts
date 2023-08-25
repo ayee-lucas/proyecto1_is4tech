@@ -6,13 +6,13 @@ import { Router } from '@angular/router';
 import {
   GoogleLoginProvider,
   SocialAuthService,
+  SocialUser
 } from '@abacritt/angularx-social-login';
-import { SocialUser } from '@abacritt/angularx-social-login';
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss'],
+  styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
   user?: SocialUser;
@@ -20,11 +20,11 @@ export class AuthComponent implements OnInit {
 
   constructor(
     private authService: SocialAuthService,
-    private router: Router,
+    private router: Router
   ) {}
 
   ngOnInit() {
-    this.authService.authState.subscribe((user) => {
+    this.authService.authState.subscribe(user => {
       this.user = user;
       this.loggedIn = user != null;
 

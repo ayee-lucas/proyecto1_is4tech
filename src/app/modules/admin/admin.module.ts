@@ -18,9 +18,9 @@ import { SharedModule } from '../shared/shared.module';
     AppRoutingModule,
     HttpClientModule,
     NgOptimizedImage,
-    SharedModule,
+    SharedModule
   ],
   providers: [],
-  bootstrap: [AdminComponent],
+  bootstrap: [AdminComponent]
 })
 export class AppModule {}

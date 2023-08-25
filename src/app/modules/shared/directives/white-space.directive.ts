@@ -4,11 +4,11 @@ import {
   EventEmitter,
   HostListener,
   Input,
-  Output,
+  Output
 } from '@angular/core';
 
 @Directive({
-  selector: '[appWhiteSpace]',
+  selector: '[appWhiteSpace]'
 })
 export class WhiteSpaceDirective {
   @Input() textToParse: string = '';
@@ -28,7 +28,7 @@ export class WhiteSpaceDirective {
 
     console.log({
       rawText: textArea.value,
-      parsed: this.textToParse,
+      parsed: this.textToParse
     });
   }
 }

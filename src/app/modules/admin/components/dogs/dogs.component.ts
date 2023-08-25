@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 // Third Parties
 import {
   GoogleLoginProvider,
-  SocialAuthService,
+  SocialAuthService
 } from '@abacritt/angularx-social-login';
 
 // Project
@@ -13,7 +13,7 @@ import { DogService } from '../../services/dog.service';
 @Component({
   selector: 'app-dogs',
   templateUrl: './dogs.component.html',
-  styleUrls: ['./dogs.component.scss'],
+  styleUrls: ['./dogs.component.scss']
 })
 export class DogsComponent implements OnInit {
   message?: string;
@@ -24,7 +24,7 @@ export class DogsComponent implements OnInit {
 
   constructor(
     private dogService: DogService,
-    private authService: SocialAuthService,
+    private authService: SocialAuthService
   ) {}
 
   ngOnInit(): void {
@@ -34,11 +34,11 @@ export class DogsComponent implements OnInit {
   getAccessToken(): void {
     this.authService
       .getAccessToken(GoogleLoginProvider.PROVIDER_ID)
-      .then((accessToken) => (this.accessToken = accessToken));
+      .then(accessToken => (this.accessToken = accessToken));
   }
 
   getDog() {
-    this.dogService.getDog().subscribe((res) => {
+    this.dogService.getDog().subscribe(res => {
       if (res.status !== 'success') {
         this.status = false;
         return;

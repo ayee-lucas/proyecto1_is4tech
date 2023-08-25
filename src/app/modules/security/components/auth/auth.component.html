@@ -1,9 +1,17 @@
-<section>
-  <div>
-    <h1>Log in</h1>
-    <asl-google-signin-button
-      type="standard"
-      size="medium"
-    ></asl-google-signin-button>
+<section
+  class="container vh-100 w-100 d-flex align-items-center justify-content-center"
+>
+  <div
+    class="container position-relative d-flex flex-column align-items-center justify-content-center w-25 h-25 login-wrapper"
+  >
+    <h1 class="text-center fw-bold">Log in</h1>
+    <div class="btn-google position-absolute">
+      <asl-google-signin-button
+        type="standard"
+        size="large"
+        shape="circle"
+        theme="outline"
+      ></asl-google-signin-button>
+    </div>
   </div>
 </section>
