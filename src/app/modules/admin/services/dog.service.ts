@@ -13,7 +13,7 @@ import { environment } from 'src/environments/environment.development';
   providedIn: 'root'
 })
 export class DogService {
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   getDog(): Observable<DogResponse> {
     const dog = this.httpClient.get<DogResponse>(environment.dogApiUrl).pipe(

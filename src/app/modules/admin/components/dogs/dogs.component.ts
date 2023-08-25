@@ -1,12 +1,6 @@
 // Angular
 import { Component, OnInit } from '@angular/core';
 
-// Third Parties
-import {
-  GoogleLoginProvider,
-  SocialAuthService
-} from '@abacritt/angularx-social-login';
-
 // Project
 import { DogService } from '../../services/dog.service';
 
@@ -20,21 +14,10 @@ export class DogsComponent implements OnInit {
   status: boolean = false;
   textAreaVal: string = 'Type Something';
 
-  accessToken: string = '';
-
-  constructor(
-    private dogService: DogService,
-    private authService: SocialAuthService
-  ) {}
+  constructor(private dogService: DogService) {}
 
   ngOnInit(): void {
     this.getDog();
-  }
-
-  getAccessToken(): void {
-    this.authService
-      .getAccessToken(GoogleLoginProvider.PROVIDER_ID)
-      .then(accessToken => (this.accessToken = accessToken));
   }
 
   getDog() {
