@@ -1,0 +1,14 @@
+@import 'src/variables/scss/global';
+
+
+.main-wrapper {
+  max-width: 500px;
+
+}
+
+input {
+  background-color: $accent-color;
+  color: $primary-color;
+  resize: none;
+  border: 1px solid $secondary-color;
+}
