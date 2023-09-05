@@ -1,0 +1,10 @@
+<div class="flex d-flex flex-column gap-5 w-100 main-wrapper">
+  <form>
+    <label>
+      Value
+    </label>
+    <input class="form-control" type="text" [formControl]="text">
+  </form>
+
+  <app-on-changes [text]="text.value"></app-on-changes>
+</div>
