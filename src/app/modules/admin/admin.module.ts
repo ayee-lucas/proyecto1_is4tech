@@ -10,12 +10,22 @@ import { AdminComponent } from './components/admin.component';
 import { DogsComponent } from './components/dogs/dogs.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { SharedModule } from '../shared/shared.module';
+import { FormComponent } from './components/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { OnChangesComponent } from './components/on-changes/on-changes.component';
 
 @NgModule({
-  declarations: [AdminComponent, DogsComponent, WelcomeComponent],
+  declarations: [
+    AdminComponent,
+    DogsComponent,
+    WelcomeComponent,
+    FormComponent,
+    OnChangesComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule,
     NgOptimizedImage,
     SharedModule
