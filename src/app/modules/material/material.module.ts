@@ -7,6 +7,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { DatesSectionComponent } from './components/dates-section/dates-section.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [WrapperComponent],
+  declarations: [WrapperComponent, DatesSectionComponent],
   imports: [
     CommonModule,
     MatDatepickerModule,
