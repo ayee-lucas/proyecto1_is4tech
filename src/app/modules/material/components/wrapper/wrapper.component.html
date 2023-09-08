@@ -13,8 +13,19 @@
     </svg>
     <h1 class="text-primary col p-0 m-0 fw-bold text-end">MATERIAL ANGULAR</h1>
   </header>
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <a
+      mat-tab-link
+      *ngFor="let link of links"
+      routerLink="{{link.path}}"
+      (click)="activeLink = link.path"
+      [active]="activeLink == link.path"> {{link.title}}
+    </a>
+  </nav>
+  <mat-tab-nav-panel #tabPanel>
+    <router-outlet></router-outlet>
+  </mat-tab-nav-panel>
 
-  <app-dates-section></app-dates-section>
 </main>
 
 

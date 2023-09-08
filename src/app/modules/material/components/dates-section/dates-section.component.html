@@ -1,3 +1,13 @@
+<header class="row w-100 mt-5 bg-primary-subtle align-items-center rounded-2 p-3">
+  <h1 class="col fw-bold fs-1 text-primary">
+    Datepickers
+
+    <mat-icon style="font-size: 25px" class="col text-primary ms-3" aria-hidden="false" aria-label="Calendar icon">
+      calendar_today
+    </mat-icon>
+  </h1>
+</header>
+
 <section class="row p-2 p-5 border-bottom mt-5">
   <h1 class="col w-50 fs-1">
     Datepicker with range
@@ -61,4 +71,47 @@
   <div class="col w-50 d-grid align-items-center">
     <year-month-picker />
   </div>
+</section>
+<section class="row p-2 p-5 border-bottom">
+  <div class="col w-50 d-flex flex-column">
+    <h1 style="line-break: auto" class="lh-1 fs-1">
+      Datepicker with min and max values
+    </h1>
+    <div class="p-2 rounded-2 bg-dark">
+      <code style="font-size: 20px" class="text-light d-flex flex-column gap-2 ">
+        <div>
+          <span class="text-primary">MM/DD/YY</span>
+        </div>
+      </code>
+    </div>
+  </div>
+  <div class="col w-50 d-grid align-items-center">
+    <mat-form-field appearance="outline">
+      <mat-label>Enter a date</mat-label>
+      <input
+        matInput
+        [matDatepicker]="basePicker">
+
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="basePicker">
+
+      </mat-datepicker-toggle>
+      <mat-datepicker #basePicker>
+
+      </mat-datepicker>
+
+    </mat-form-field>
+  </div>
+</section>
+
+<section class="d-flex w-100 justify-content-end align-items-center py-5">
+  <a
+    style="bottom: 10%"
+    class="btn btn-outline-primary"
+    routerLink="/material/dialog-table"
+  >Dialog / Table
+  </a>
+  <mat-icon style="font-size: 25px" class="text-primary ms-3" aria-hidden="false" aria-label="Calendar icon">
+    keyboard_arrow_right
+  </mat-icon>
 </section>
