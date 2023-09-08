@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 const routes: Routes = [
   {
@@ -20,7 +22,9 @@ const routes: Routes = [
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ReactiveFormsModule,
+    MatInputModule
   ],
   exports: [RouterModule],
   bootstrap: [WrapperComponent]
