@@ -18,6 +18,14 @@ const routes: Routes = [
         m => m.SecurityModule
       ),
     canActivate: [loginGuard]
+  },
+  {
+    path: 'material',
+    loadChildren: () =>
+      import('src/app/modules/material/material.module').then(
+        m => m.MaterialModule
+      ),
+    canActivate: [authGuard]
   }
 ];
 

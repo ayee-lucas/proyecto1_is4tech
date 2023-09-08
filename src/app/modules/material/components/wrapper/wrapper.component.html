@@ -1,0 +1,22 @@
+<main class="container">
+  <section class="row p-2 p-5">
+    <h1 class="col w-50">
+      Datepicker with range
+    </h1>
+    <div class="col w-50">
+      <div class="w-100">
+        <mat-form-field>
+          <mat-label>Enter a date range</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate placeholder="Start date">
+            <input matEndDate placeholder="End date">
+          </mat-date-range-input>
+          <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+      </div>
+    </div>
+  </section>
+</main>
+

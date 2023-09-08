@@ -1,0 +1,8 @@
+@import "src/variables/scss/global";
+
+
+main h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  color: $secondary-color;
+}
