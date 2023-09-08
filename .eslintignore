@@ -3,3 +3,5 @@ package-lock.json
 dist
 
 node_modules/*
+
+src/app/modules/material/components/year-month-picker/

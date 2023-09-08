@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { DatesSectionComponent } from './components/dates-section/dates-section.component';
+import { YearMonthPickerComponent } from './components/year-month-picker/year-month-picker.component';
 
 const routes: Routes = [
   {
@@ -25,7 +26,8 @@ const routes: Routes = [
     MatFormFieldModule,
     RouterModule.forChild(routes),
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    YearMonthPickerComponent
   ],
   exports: [RouterModule],
   bootstrap: [WrapperComponent]
