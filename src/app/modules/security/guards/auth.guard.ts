@@ -20,7 +20,7 @@ export const loginGuard = () => {
   const router = inject(Router);
 
   if (storedToken) {
-    return router.parseUrl('/dogs');
+    return router.parseUrl('/');
   }
 
   return true;
