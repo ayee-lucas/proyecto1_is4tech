@@ -12,6 +12,13 @@ import { YearMonthPickerComponent } from './components/year-month-picker/year-mo
 import { MatIconModule } from '@angular/material/icon';
 import { DialogTableSectionComponent } from './components/dialog-table-section/dialog-table-section.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonModule } from '@angular/material/button';
+import { SharedModule } from '../shared/shared.module';
+import { DialogFormComponent } from './components/dialog-form/dialog-form.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { TablePeopleComponent } from './components/table-people/table-people.component';
 
 const routes: Routes = [
   {
@@ -20,11 +27,13 @@ const routes: Routes = [
     children: [
       {
         path: 'date-pickers',
-        component: DatesSectionComponent
+        component: DatesSectionComponent,
+        data: { animation: 'DatePickers' }
       },
       {
         path: 'dialog-table',
-        component: DialogTableSectionComponent
+        component: DialogTableSectionComponent,
+        data: { animation: 'Dialog' }
       }
     ]
   }
@@ -34,7 +43,9 @@ const routes: Routes = [
   declarations: [
     WrapperComponent,
     DatesSectionComponent,
-    DialogTableSectionComponent
+    DialogTableSectionComponent,
+    DialogFormComponent,
+    TablePeopleComponent
   ],
   imports: [
     CommonModule,
@@ -46,7 +57,12 @@ const routes: Routes = [
     MatInputModule,
     YearMonthPickerComponent,
     MatIconModule,
-    MatTabsModule
+    MatTabsModule,
+    MatButtonModule,
+    SharedModule,
+    MatDialogModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   exports: [RouterModule],
   bootstrap: [WrapperComponent]

@@ -8,9 +8,8 @@ describe('DialogTableSectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DialogTableSectionComponent ]
-    })
-    .compileComponents();
+      declarations: [DialogTableSectionComponent]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(DialogTableSectionComponent);
     component = fixture.componentInstance;

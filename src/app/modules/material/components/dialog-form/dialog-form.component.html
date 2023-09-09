@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Hi {{data.title}}</h1>
+<form>
+  <div mat-dialog-content>
+    <p>Update your name</p>
+    <mat-form-field appearance="fill">
+      <mat-label>New Name</mat-label>
+      <input matInput required [formControl]="newName">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button (click)="submit()">Ok</button>
+  </div>
+</form>
