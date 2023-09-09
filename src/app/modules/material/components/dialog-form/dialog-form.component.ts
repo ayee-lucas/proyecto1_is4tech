@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DialogTableSectionComponent } from '../dialog-table-section/dialog-table-section.component';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 
 type DialogData = {
   title: string;
@@ -14,7 +14,7 @@ type DialogData = {
   styleUrls: ['./dialog-form.component.scss']
 })
 export class DialogFormComponent {
-  newName = new FormControl(this.data.name);
+  newName = new FormControl(this.data.name, Validators.required);
 
   constructor(
     public dialogRef: MatDialogRef<DialogTableSectionComponent>,
@@ -29,7 +29,7 @@ export class DialogFormComponent {
     if (!this.newName.value) {
       return;
     }
-    if (this.newName.value.length <= 0) {
+    if (this.newName.value?.trim().length <= 0) {
       return;
     }
 
