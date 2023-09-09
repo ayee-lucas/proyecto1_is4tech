@@ -56,10 +56,13 @@
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="thirdFormGroup">
+    <mat-step [stepControl]="thirdFormGroup" [optional]="!dpiRequired">
+      <mat-slide-toggle (click)="dpiRequired=!dpiRequired">
+        DPI required
+      </mat-slide-toggle>
       <form [formGroup]="thirdFormGroup" class="m-2">
         <ng-template matStepLabel>DPI</ng-template>
-        <mat-form-field appearance="outline">
+        <mat-form-field *ngIf="dpiRequired" appearance="outline">
           <mat-label>Enter your DPI</mat-label>
           <input matInput pattern="[0-9]{1,13}" maxlength="13" formControlName="thirdCtrl"
                  placeholder="1234567891012"
@@ -67,7 +70,7 @@
         </mat-form-field>
         <div>
           <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext [disabled]="!thirdFormGroup.valid">Next</button>
+          <button mat-button matStepperNext [disabled]="!thirdFormGroup.valid && dpiRequired">Next</button>
         </div>
       </form>
     </mat-step>

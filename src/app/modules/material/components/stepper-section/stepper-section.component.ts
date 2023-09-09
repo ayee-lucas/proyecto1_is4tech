@@ -7,6 +7,8 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./stepper-section.component.scss']
 })
 export class StepperSectionComponent {
+  dpiRequired = false;
+
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required]
   });

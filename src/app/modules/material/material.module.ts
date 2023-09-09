@@ -22,6 +22,7 @@ import { TablePeopleComponent } from './components/table-people/table-people.com
 import { MatSortModule } from '@angular/material/sort';
 import { StepperSectionComponent } from './components/stepper-section/stepper-section.component';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 const routes: Routes = [
   {
@@ -73,7 +74,8 @@ const routes: Routes = [
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatStepperModule
+    MatStepperModule,
+    MatSlideToggleModule
   ],
   exports: [RouterModule],
   bootstrap: [WrapperComponent]
