@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 export type Person = {
   id: number;
@@ -34,7 +35,21 @@ export class TablePeopleComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator | null = null;
 
+  @ViewChild(MatSort) sort: MatSort | null = null;
+
   ngAfterViewInit() {
     this.tableSource.paginator = this.paginator;
+    this.tableSource.sort = this.sort;
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.tableSource.filter = filterValue.trim().toLowerCase();
+    this.tableSource.filterPredicate = function (
+      data,
+      filter: string
+    ): boolean {
+      return data.name.toLowerCase().includes(filter);
+    };
   }
 }

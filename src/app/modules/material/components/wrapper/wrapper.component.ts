@@ -21,6 +21,10 @@ export class WrapperComponent implements OnInit {
     {
       title: 'Dialog - Table',
       path: '/material/dialog-table'
+    },
+    {
+      title: 'Stepper',
+      path: '/material/stepper'
     }
   ];
   activeLink = '';

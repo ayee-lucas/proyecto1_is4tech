@@ -19,6 +19,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { TablePeopleComponent } from './components/table-people/table-people.component';
+import { MatSortModule } from '@angular/material/sort';
+import { StepperSectionComponent } from './components/stepper-section/stepper-section.component';
 
 const routes: Routes = [
   {
@@ -34,6 +36,11 @@ const routes: Routes = [
         path: 'dialog-table',
         component: DialogTableSectionComponent,
         data: { animation: 'Dialog' }
+      },
+      {
+        path: 'stepper',
+        component: StepperSectionComponent,
+        data: { animation: 'Stepper' }
       }
     ]
   }
@@ -45,7 +52,8 @@ const routes: Routes = [
     DatesSectionComponent,
     DialogTableSectionComponent,
     DialogFormComponent,
-    TablePeopleComponent
+    TablePeopleComponent,
+    StepperSectionComponent
   ],
   imports: [
     CommonModule,
@@ -62,7 +70,8 @@ const routes: Routes = [
     SharedModule,
     MatDialogModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSortModule
   ],
   exports: [RouterModule],
   bootstrap: [WrapperComponent]
