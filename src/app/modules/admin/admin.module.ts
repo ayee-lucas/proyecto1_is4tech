@@ -13,7 +13,6 @@ import { SharedModule } from '../shared/shared.module';
 import { FormComponent } from './components/form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OnChangesComponent } from './components/on-changes/on-changes.component';
-import { MaterialModule } from '../material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -30,7 +29,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     HttpClientModule,
     NgOptimizedImage,
-    MaterialModule,
     SharedModule,
     BrowserAnimationsModule
   ],
