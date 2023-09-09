@@ -32,7 +32,7 @@ export class AuthComponent implements OnInit {
 
       const storedToken = localStorage.getItem('Bearer');
       if (storedToken) {
-        this.router.navigate(['/dogs']);
+        this.router.navigate(['/']);
       }
     });
   }
