@@ -21,6 +21,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { TablePeopleComponent } from './components/table-people/table-people.component';
 import { MatSortModule } from '@angular/material/sort';
 import { StepperSectionComponent } from './components/stepper-section/stepper-section.component';
+import { MatStepperModule } from '@angular/material/stepper';
 
 const routes: Routes = [
   {
@@ -71,7 +72,8 @@ const routes: Routes = [
     MatDialogModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatStepperModule
   ],
   exports: [RouterModule],
   bootstrap: [WrapperComponent]
