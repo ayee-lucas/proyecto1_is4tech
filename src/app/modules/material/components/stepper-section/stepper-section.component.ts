@@ -13,6 +13,11 @@ export class StepperSectionComponent {
   secondFormGroup = this._formBuilder.group({
     secondCtrl: ['', Validators.required]
   });
+  thirdFormGroup = this._formBuilder.group({
+    thirdCtrl: ['', [Validators.minLength(13), Validators.maxLength(13)]]
+  });
+
+  maxDate = new Date();
 
   constructor(private _formBuilder: FormBuilder) {}
 }

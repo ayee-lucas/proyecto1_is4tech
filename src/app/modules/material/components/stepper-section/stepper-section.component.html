@@ -15,30 +15,59 @@
 </header>
 
 <section class="row p-2 p-5 border-bottom mt-5">
-  <mat-stepper orientation="vertical" #stepper>
+  <mat-stepper [linear]="true" orientation="vertical" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>Fill out your name</ng-template>
-        <mat-form-field appearance="fill">
-          <mat-label>Name</mat-label>
-          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        <ng-template matStepLabel>Select your birth date</ng-template>
+        <mat-form-field appearance="outline" class="m-2"
+        >
+          <mat-label>Birth date</mat-label>
+          <input
+            matInput
+            formControlName="firstCtrl"
+            [max]="maxDate"
+            [matDatepicker]="releasedAtPicker">
+
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="releasedAtPicker">
+
+          </mat-datepicker-toggle>
+          <mat-datepicker #releasedAtPicker>
+
+          </mat-datepicker>
+
         </mat-form-field>
         <div>
-          <button mat-button matStepperNext>Next</button>
+          <button mat-button matStepperNext [disabled]="!firstFormGroup.valid">Next</button>
         </div>
       </form>
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
-      <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>Fill out your address</ng-template>
-        <mat-form-field appearance="fill">
-          <mat-label>Address</mat-label>
-          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+      <form [formGroup]="secondFormGroup" class="m-2">
+        <ng-template matStepLabel>Name</ng-template>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your name</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Jhon Doe..."
                  required>
         </mat-form-field>
         <div>
           <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+          <button mat-button matStepperNext [disabled]="!secondFormGroup.valid">Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="thirdFormGroup" class="m-2">
+        <ng-template matStepLabel>DPI</ng-template>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your DPI</mat-label>
+          <input matInput pattern="[0-9]{1,13}" maxlength="13" formControlName="thirdCtrl"
+                 placeholder="1234567891012"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext [disabled]="!thirdFormGroup.valid">Next</button>
         </div>
       </form>
     </mat-step>
