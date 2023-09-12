@@ -5,10 +5,11 @@ import { FormsModule } from '@angular/forms';
 
 // Project
 import { WhiteSpaceDirective } from './directives/white-space.directive';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
-  declarations: [WhiteSpaceDirective],
+  declarations: [WhiteSpaceDirective, HighlightDirective],
   imports: [CommonModule],
-  exports: [WhiteSpaceDirective, FormsModule]
+  exports: [WhiteSpaceDirective, FormsModule, HighlightDirective]
 })
 export class SharedModule {}
