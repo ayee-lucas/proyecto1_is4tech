@@ -13,6 +13,7 @@ export class DogsComponent implements OnInit {
   message?: string;
   status: boolean = false;
   textAreaVal: string = 'Type Something';
+  textToTrim: string = 'Porfin hoy es viernes';
 
   constructor(private dogService: DogService) {}
 

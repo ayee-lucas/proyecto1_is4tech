@@ -6,10 +6,11 @@ import { FormsModule } from '@angular/forms';
 // Project
 import { WhiteSpaceDirective } from './directives/white-space.directive';
 import { HighlightDirective } from './directives/highlight.directive';
+import { TrimPipe } from './pipes/trim.pipe';
 
 @NgModule({
-  declarations: [WhiteSpaceDirective, HighlightDirective],
+  declarations: [WhiteSpaceDirective, HighlightDirective, TrimPipe],
   imports: [CommonModule],
-  exports: [WhiteSpaceDirective, FormsModule, HighlightDirective]
+  exports: [WhiteSpaceDirective, FormsModule, HighlightDirective, TrimPipe]
 })
 export class SharedModule {}
