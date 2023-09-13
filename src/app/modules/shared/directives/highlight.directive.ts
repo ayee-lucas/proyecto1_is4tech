@@ -12,7 +12,7 @@ export class HighlightDirective {
     console.log(this.rgbColor);
     this.element.nativeElement.style.textDecoration = 'underline';
     if (this.rgbColor) {
-      this.element.nativeElement.style.textDecorationColor = this.rgbColor;
+      this.element.nativeElement.style.textDecorationColor = `rgb(${this.rgbColor})`;
     }
   }
 
