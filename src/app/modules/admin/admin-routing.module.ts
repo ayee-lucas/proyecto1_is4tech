@@ -26,6 +26,14 @@ const routes: Routes = [
         m => m.MaterialModule
       ),
     canActivate: [authGuard]
+  },
+  {
+    path: 'validations',
+    loadChildren: () =>
+      import('src/app/modules/validations/validations.module').then(
+        m => m.ValidationsModule
+      ),
+    canActivate: [authGuard]
   }
 ];
 
