@@ -57,9 +57,18 @@
 
 
       <div class="row mt-2 w-50 px-3">
-        <button class="col btn btn-outline-primary" [disabled]="!clientForm.valid" type="submit">Finish</button>
-        <button class="col btn btn-outline-danger ms-3">Cancel</button>
+        <button class="col btn btn-outline-primary" [disabled]="!clientForm.valid" (click)="showCode = true" type="submit">Finish</button>
+        <button class="col btn btn-outline-danger ms-3" (click)="clear()">Cancel</button>
       </div>
     </form>
   </div>
+  <div class="row mt-5" *ngIf="showCode">
+    <code class="bg-dark p-4">
+      <p class="text-primary">
+        {{ clientForm.value | json }}
+      </p>
+    </code>
+
+  </div>
 </section>
+
