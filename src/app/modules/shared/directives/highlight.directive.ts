@@ -13,6 +13,7 @@ export class HighlightDirective {
     this.element.nativeElement.style.textDecoration = 'underline';
     if (this.rgbColor) {
       this.element.nativeElement.style.textDecorationColor = `rgb(${this.rgbColor})`;
+      this.element.nativeElement.style.backgroundColor = `rgb(${this.rgbColor})`;
     }
   }
 
@@ -20,5 +21,6 @@ export class HighlightDirective {
   onOut() {
     console.log(this.rgbColor);
     this.element.nativeElement.style.textDecoration = 'unset';
+    this.element.nativeElement.style.backgroundColor = `unset`;
   }
 }
