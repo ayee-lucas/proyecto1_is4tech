@@ -1,0 +1,65 @@
+<section class="w-100 h-100 container">
+  <h1 class="row mt-5 border-bottom border-primary-subtle py-4">Form Validations</h1>
+  <div class="row">
+    <h2 class="text-primary fs-2 fw-medium">Add Client</h2>
+    <form [formGroup]="clientForm" class="container" (ngSubmit)="onSubmit()">
+      <div class="row w-75">
+        <mat-form-field class="col" >
+          <mat-label>Name</mat-label>
+          <input matInput type="text" formControlName="name">
+          <button  matSuffix mat-icon-button>
+            <mat-icon>account_circle</mat-icon>
+          </button>
+        </mat-form-field>
+        <mat-form-field class="col">
+          <mat-label>What's your birth day</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="birth" [max]="today">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="row mt-2 w-75">
+        <mat-form-field class="col" >
+          <mat-label>NIT</mat-label>
+          <input matInput type="text" formControlName="nit">
+          <button  matSuffix mat-icon-button>
+            <mat-icon>power_input</mat-icon>
+          </button>
+        </mat-form-field>
+        <mat-form-field class="col">
+          <mat-label>Comment</mat-label>
+          <textarea  matInput type="text" formControlName="comment"></textarea>
+          <button  matSuffix mat-icon-button>
+            <mat-icon>sms</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <mat-slide-toggle (click)="newClient = !newClient">New?</mat-slide-toggle>
+      <div class="row mt-2 w-75" *ngIf="newClient">
+        <mat-form-field class="col" >
+          <mat-label>Number</mat-label>
+          <input matInput type="text"  formControlName="emergencyNumber">
+          <button  matSuffix mat-icon-button>
+            <mat-icon>exposure_plus_1</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="row mt-2 w-75" *ngIf="newClient">
+        <mat-form-field class="col">
+          <mat-label>Address</mat-label>
+          <input  matInput type="text"   formControlName="address">
+          <button  matSuffix mat-icon-button>
+            <mat-icon>home</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+
+      <div class="row mt-2 w-50 px-3">
+        <button class="col btn btn-outline-primary" [disabled]="!clientForm.valid" type="submit">Finish</button>
+        <button class="col btn btn-outline-danger ms-3">Cancel</button>
+      </div>
+    </form>
+  </div>
+</section>
